@@ -50,6 +50,15 @@ Options
 
 .. program:: harmony txt2clr
 
+.. option:: --no-generate-color-names, -G
+    
+    Disables the color name generation for the unlabelled colors. Better demonstrated on :ref:`sort_command`.
+
+    .. versionadded:: 0.5.0
+        
+        Added ``--no-generate-color-names`` option
+
+
 .. option:: --help
 
     Display the options and information about the command;

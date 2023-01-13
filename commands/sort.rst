@@ -1,3 +1,5 @@
+.. _sort_command:
+
 sort
 ====
 
@@ -255,6 +257,54 @@ Options
         $ harmony sort colors.txt -s _example
 
     And the output file will be called ``colors_hillbert_example.txt``.
+
+
+.. option:: --no-generate-color-names, -G
+    
+    Disables the color name generation for the unlabelled colors.
+
+    .. versionadded:: 0.5.0
+        
+        Added ``--no-generate-color-names`` option
+
+    #######
+    Example
+    #######
+
+    Given the file ``colors.txt`` with the following content (see :ref:`file_specification`)::
+
+        (49, 6, 210)
+        #0f8fb3
+        (201, 118, 6)
+        (84, 62, 115)
+        #b52871
+        (84, 16, 13)
+
+    Now we will sort with the ``-G`` flag off::
+
+        $ harmony sort colors.txt
+
+    And we generate a file ``colors_hillbert_sorted.txt`` with the following content::
+
+        (84, 16, 13) Falu Red
+        (84, 62, 115) Meteorite
+        #b52871 Deep Cerise
+        (201, 118, 6) Tenne (Tawny)
+        #0f8fb3 Pacific Blue
+        (49, 6, 210) Medium Blue
+
+    But if we sort with the ``-G`` flag on::
+
+        $ harmony sort colors.txt -G
+
+    We generate a file ``colors_hillbert_sorted.txt`` with the following content::
+
+        (84, 16, 13) 
+        (84, 62, 115) 
+        #b52871 
+        (201, 118, 6) 
+        #0f8fb3 
+        (49, 6, 210)
 
 
 .. option:: --help

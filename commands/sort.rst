@@ -280,6 +280,10 @@ Options
         #b52871
         (84, 16, 13)
 
+    Which represent the following colors:
+
+    .. image:: ../_static/images/sort-1.png
+
     Now we will sort with the ``-G`` flag off::
 
         $ harmony sort colors.txt

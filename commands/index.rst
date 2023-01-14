@@ -9,4 +9,5 @@ For allowing the user to manage them color palettes, Harmony provides the follow
    sort
    txt2ase
    txt2clr
+   txt2image
    utils

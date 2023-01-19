@@ -33,11 +33,11 @@ And we generate a file ``colors.png`` with the following image:
 Arguments
 =========
 
-.. program:: harmony sort
+.. program:: harmony image2txt
 
-.. option:: colors-file
+.. option:: image-file
 
-    The Harmony color palette file with the list of colors to be represented (see :ref:`file_specification`).
+    The image which will be used to extract the colors.
 
 
 =======

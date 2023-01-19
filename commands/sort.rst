@@ -7,7 +7,7 @@ sort
 Introduction
 ============
 
-The ``sort`` command allow to sort a list of colors given a color palette file (see :ref:`file_specification`)
+The ``sort`` command allow to sort a list of colors given a color palette file (see :ref:`file_specification`).
 
 =======
 Example

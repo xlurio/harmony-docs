@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = "Harmony"
-copyright = "2022, Lucas Calegario"
+copyright = "2023, Lucas Calegario"
 author = "Lucas Calegario"
 
 # The short X.Y version

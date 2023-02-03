@@ -35,6 +35,8 @@ Arguments
 
 .. program:: harmony image2txt
 
+    .. versionadded:: 0.6.0
+
 .. option:: image-file
 
     The image which will be used to extract the colors.

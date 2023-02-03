@@ -8,6 +8,7 @@ For allowing the user to manage them color palettes, Harmony provides the follow
    
    image2txt
    sort
+   svg2txt
    txt2ase
    txt2clr
    txt2image

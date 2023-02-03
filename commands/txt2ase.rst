@@ -55,6 +55,8 @@ Options
 
 .. program:: harmony txt2ase
 
+    .. versionadded:: 0.3.0
+
 .. option:: --palette-name <name>, -n <name>
 
     Default\: Palette ``ID generated with the uuid4 algorithm`` sorted by harmony. The name of the palette to be written to the ``.ase`` file.

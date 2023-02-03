@@ -1,23 +1,23 @@
-image2txt
+svg2txt
 =========
 
 ============
 Introduction
 ============
 
-The ``image2txt`` command allow to extract the colors from an image and write them into a color palette file (see :ref:`file_specification`).
+The ``svg2txt`` command allow to extract the colors from an SVG file and write them into a color palette file (see :ref:`file_specification`).
 
 =======
 Example
 =======
 
-Given the file ``colors.png`` with the following image:
+Given the file ``colors.svg`` with the following image:
 
-.. image:: ../_static/images/image2txt-1.jpg
+.. image:: ../_static/images/svg2txt-1.svg
 
 Let's generate a harmony file (see :ref:`file_specification`) with the color palette::
 
-    $ harmony image2txt colors.png
+    $ harmony svg2txt colors.svg
 
 And we generate a file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
@@ -32,17 +32,15 @@ And we generate a file ``colors.txt`` with the following content (see :ref:`file
 Arguments
 =========
 
-.. program:: harmony image2txt
+.. program:: harmony svg2txt
 
-    .. versionadded:: 0.7.0
+    .. versionadded:: 1.0.0
+
+        Added command ``svg2txt``
 
 .. option:: colors-file
 
-    An image or a directory with images to extract colors (see :ref:`file_specification`).
-
-    .. versionchanged:: 1.0.0
-
-        Now directories are also accepted
+    An SVG file or a directory with SVG files to extract colors (see :ref:`file_specification`).
 
 
 =======
@@ -60,54 +58,54 @@ Options
 
     .. versionadded:: 1.0.0
 
-        Added ``--color-format`` option to ``image2txt``
+        Added ``--color-format`` option to ``svg2txt``
 
     #######
     Example
     #######
 
-    Given the file ``colors.png`` with the following image:
+    Given the file ``colors.svg`` with the following image:
 
-    .. image:: ../_static/images/image2txt-1.jpg
+    .. image:: ../_static/images/svg2txt-1.svg
 
     Let's generate a harmony file (see :ref:`file_specification`) with the output color format set to ``rgb``::
 
-        $ harmony image2txt colors.png -f rgb
+        $ harmony svg2txt colors.svg -f rgb
 
     And we generate a file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-        #FFFFFF White
-        HSL(205, 56%, 68%) Maya Blue
-        RGB(230, 36, 36) Fire Brick
-        #ff7381 Froly
-        RGB(255, 115, 129) Froly
-        #ff7381 Froly
+        RGB(221, 228, 236) Alice Blue
+        RGB(137, 144, 163) Manatee
+        RGB(155, 166, 188) Rock Blue
+        RGB(164, 172, 191) Echo Blue
+        RGB(169, 178, 193) Mischka
+        ...
 
     Now let's generate a harmony file (see :ref:`file_specification`) the output color format set to ``hexcode``::
 
-        $ harmony image2txt colors.png -f hexcode
+        $ harmony svg2txt colors.svg -f hexcode
 
     And we generate a file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-        #FFFFFF White
-        HSL(205, 56%, 68%) Maya Blue
-        RGB(230, 36, 36) Fire Brick
-        #ff7381 Froly
-        RGB(255, 115, 129) Froly
-        #ff7381 Froly
+        #dde4ec Alice Blue
+        #8990a3 Manatee
+        #9ba6bc Rock Blue
+        #a4acbf Echo Blue
+        #a9b2c1 Mischka
+        ...
 
     Now let's generate a harmony file (see :ref:`file_specification`) the output color format set to ``hsl``::
 
-        $ harmony image2txt colors.png -f hsl
+        $ harmony svg2txt colors.svg -f hsl
 
     And we generate a file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-        #FFFFFF White
-        HSL(205, 56%, 68%) Maya Blue
-        RGB(230, 36, 36) Fire Brick
-        #ff7381 Froly
-        RGB(255, 115, 129) Froly
-        #ff7381 Froly
+        HSL(212, 6%, 89%) Alice Blue
+        HSL(223, 15%, 58%) Manatee
+        HSL(220, 17%, 67%) Rock Blue
+        HSL(222, 14%, 69%) Echo Blue
+        HSL(217, 12%, 70%) Mischka
+        ...
 
 
 .. option:: --recursively, -r

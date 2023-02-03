@@ -21,11 +21,11 @@ Let's generate a image with the color palette::
 
 And we generate a file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-    (221, 228, 236) Alice Blue
-    (137, 144, 163) Manatee
-    (155, 166, 188) Rock Blue
-    (164, 172, 191) Echo Blue
-    (169, 178, 193) Mischka
+    RGB(221, 228, 236) Alice Blue
+    RGB(137, 144, 163) Manatee
+    RGB(155, 166, 188) Rock Blue
+    RGB(164, 172, 191) Echo Blue
+    RGB(169, 178, 193) Mischka
     ...
 
 =========

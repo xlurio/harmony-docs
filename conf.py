@@ -24,9 +24,9 @@ copyright = "2022, Lucas Calegario"
 author = "Lucas Calegario"
 
 # The short X.Y version
-version = "0.7.0"
+version = "1.0.0"
 # The full version, including alpha/beta/rc tags
-release = "January 2023 (version 0.7.0)"
+release = "February 2023 (version 1.0.0)"
 
 
 # -- General configuration ---------------------------------------------------

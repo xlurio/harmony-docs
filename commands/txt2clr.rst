@@ -18,12 +18,12 @@ Example
 
 Given the file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-    (49, 6, 210) Dark Blue
+    RGB(49, 6, 210) Dark Blue
     #0f8fb3 Light Blue
-    (201, 118, 6) Orange
-    (84, 62, 115) Violet
+    RGB(201, 118, 6) Orange
+    RGB(84, 62, 115) Violet
     #b52871 Dark Pink
-    (84, 16, 13) Dark Red
+    RGB(84, 16, 13) Dark Red
 
 
 All we need to do is run the following command::

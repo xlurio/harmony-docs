@@ -15,12 +15,12 @@ Example
 
 Given the file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-    (49, 6, 210) Dark Blue
+    RGB(49, 6, 210) Dark Blue
     #0f8fb3 Light Blue
-    (201, 118, 6) Orange
-    (84, 62, 115) Violet
+    RGB(201, 118, 6) Orange
+    RGB(84, 62, 115) Violet
     #b52871 Dark Pink
-    (84, 16, 13) Dark Red
+    RGB(84, 16, 13) Dark Red
 
 Which represent the following colors:
 
@@ -30,14 +30,14 @@ Let's sort it using all the default values::
 
     $ harmony sort colors.txt
 
-And we generate a file ``colors_hillbert_sorted.txt`` with the following content::
+And we generate a file ``colors_hillbert.txt`` with the following content::
 
-    (84, 16, 13) Dark Red
-    (84, 62, 115) Violet
+    RGB(84, 16, 13) Dark Red
+    RGB(84, 62, 115) Violet
     #b52871 Dark Pink
-    (201, 118, 6) Orange
+    RGB(201, 118, 6) Orange
     #0f8fb3 Light Blue
-    (49, 6, 210) Dark Blue
+    RGB(49, 6, 210) Dark Blue
 
 Which represent the following colors:
 
@@ -83,12 +83,12 @@ Options
 
     Given the file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-        (49, 6, 210) Dark Blue
+        RGB(49, 6, 210) Dark Blue
         #0f8fb3 Light Blue
-        (201, 118, 6) Orange
-        (84, 62, 115) Violet
+        RGB(201, 118, 6) Orange
+        RGB(84, 62, 115) Violet
         #b52871 Dark Pink
-        (84, 16, 13) Dark Red
+        RGB(84, 16, 13) Dark Red
 
     Let's sort it with the ``hsl`` algorithm::
 
@@ -98,13 +98,13 @@ Options
 
     .. image:: ../_static/images/sort-1.png
 
-    And we generate a file ``colors_hsl_sorted.txt`` with the content::
+    And we generate a file ``colors_hsl.txt`` with the content::
 
-        (84, 16, 13) Dark Red
-        (201, 118, 6) Orange
+        RGB(84, 16, 13) Dark Red
+        RGB(201, 118, 6) Orange
         #0f8fb3 Light Blue
-        (49, 6, 210) Dark Blue
-        (84, 62, 115) Violet
+        RGB(49, 6, 210) Dark Blue
+        RGB(84, 62, 115) Violet
         #b52871 Dark Pink
 
     Which represent the following colors:
@@ -133,12 +133,12 @@ Options
 
     Given the file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-        (49, 6, 210) Dark Blue
+        RGB(49, 6, 210) Dark Blue
         #0f8fb3 Light Blue
-        (201, 118, 6) Orange
-        (84, 62, 115) Violet
+        RGB(201, 118, 6) Orange
+        RGB(84, 62, 115) Violet
         #b52871 Dark Pink
-        (84, 16, 13) Dark Red
+        RGB(84, 16, 13) Dark Red
 
     Which represent the following colors:
 
@@ -148,14 +148,14 @@ Options
 
         $ harmony sort colors.txt
 
-    And we generate a file ``colors_hillbert_sorted.txt`` with the following content::
+    And we generate a file ``colors_hillbert.txt`` with the following content::
 
-        (84, 16, 13) Dark Red
-        (84, 62, 115) Violet
+        RGB(84, 16, 13) Dark Red
+        RGB(84, 62, 115) Violet
         #b52871 Dark Pink
-        (201, 118, 6) Orange
+        RGB(201, 118, 6) Orange
         #0f8fb3 Light Blue
-        (49, 6, 210) Dark Blue
+        RGB(49, 6, 210) Dark Blue
 
     Which represent the following colors:
 
@@ -165,14 +165,14 @@ Options
 
         $ harmony sort colors.txt -d backward
 
-    And we generate a file ``colors_hillbert_sorted.txt`` with the following content::
+    And we generate a file ``colors_hillbert.txt`` with the following content::
 
-        (49, 6, 210) Dark Blue
+        RGB(49, 6, 210) Dark Blue
         #0f8fb3 Light Blue
-        (201, 118, 6) Orange
+        RGB(201, 118, 6) Orange
         #b52871 Dark Pink
-        (84, 62, 115) Violet
-        (84, 16, 13) Dark Red
+        RGB(84, 62, 115) Violet
+        RGB(84, 16, 13) Dark Red
 
     Which represent the following colors:
 
@@ -186,10 +186,15 @@ Options
     * input: The output format will be the same as the input format;
     * rgb: The output for all colors will be in RGB format;
     * hexcode: The output for all colors will be in Hexcode format;
+    * hsl: The output for all colors will be in HSL format;
 
     .. versionchanged:: 0.4.2
 
         Added short name ``-f``.
+
+    .. versionchanged:: 1.0.0
+        
+        Added ``hsl`` format
 
     #######
     Example
@@ -197,43 +202,56 @@ Options
 
     Given the file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-        (49, 6, 210) Dark Blue
+        RGB(49, 6, 210) Dark Blue
         #0f8fb3 Light Blue
-        (201, 118, 6) Orange
-        (84, 62, 115) Violet
+        RGB(201, 118, 6) Orange
+        RGB(84, 62, 115) Violet
         #b52871 Dark Pink
-        (84, 16, 13) Dark Red
+        RGB(84, 16, 13) Dark Red
 
     Let's sort with the output color format set to ``input``::
 
         $ harmony sort colors.txt
 
-    And we generate a file ``colors_hillbert_sorted.txt`` with the following content::
+    And we generate a file ``colors_hillbert.txt`` with the following content::
 
-        (84, 16, 13) Dark Red
-        (84, 62, 115) Violet
+        RGB(84, 16, 13) Dark Red
+        RGB(84, 62, 115) Violet
         #b52871 Dark Pink
-        (201, 118, 6) Orange
+        RGB(201, 118, 6) Orange
         #0f8fb3 Light Blue
-        (49, 6, 210) Dark Blue
+        RGB(49, 6, 210) Dark Blue
 
     Now we will sort with the output color format set to ``rgb``::
 
         $ harmony sort colors.txt -f rgb
 
-    And we generate a file ``colors_hillbert_sorted.txt`` with the following content::
+    And we generate a file ``colors_hillbert.txt`` with the following content::
 
-        (84, 16, 13) Dark Red
-        (84, 62, 115) Violet
-        (181, 40, 113) Dark Pink
-        (201, 118, 6) Orange
-        (15, 143, 179) Light Blue
-        (49, 6, 210) Dark Blue
+        RGB(84, 16, 13) Dark Red
+        RGB(84, 62, 115) Violet
+        RGB(181, 40, 113) Dark Pink
+        RGB(201, 118, 6) Orange
+        RGB(15, 143, 179) Light Blue
+        RGB(49, 6, 210) Dark Blue
+
+    Now we will sort with the output color format set to ``hsl``::
+
+        $ harmony sort colors.txt -f hsl
+
+    And we generate a file ``colors_hillbert.txt`` with the following content::
+
+        HSL(2, 84%, 19%) Dark Red
+        HSL(264, 46%, 34%) Violet
+        HSL(328, 77%, 43%) Dark Pink
+        HSL(34, 97%, 40%) Orange
+        HSL(193, 91%, 38%) Light Blue
+        HSL(252, 97%, 42%) Dark Blue
 
 
 .. option:: --suffix <suffix>, -s <suffix>
 
-    Default\: _sorted. The suffix to be append to the file's name.
+    The suffix to be append to the file's name.
 
     .. versionchanged:: 0.4.2
 
@@ -245,12 +263,12 @@ Options
 
     Given the file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-        (49, 6, 210) Dark Blue
+        RGB(49, 6, 210) Dark Blue
         #0f8fb3 Light Blue
-        (201, 118, 6) Orange
-        (84, 62, 115) Violet
+        RGB(201, 118, 6) Orange
+        RGB(84, 62, 115) Violet
         #b52871 Dark Pink
-        (84, 16, 13) Dark Red
+        RGB(84, 16, 13) Dark Red
 
     Let's sort with the suffix ``_example``::
 
@@ -273,12 +291,12 @@ Options
 
     Given the file ``colors.txt`` with the following content (see :ref:`file_specification`)::
 
-        (49, 6, 210)
+        RGB(49, 6, 210)
         #0f8fb3
-        (201, 118, 6)
-        (84, 62, 115)
+        RGB(201, 118, 6)
+        RGB(84, 62, 115)
         #b52871
-        (84, 16, 13)
+        RGB(84, 16, 13)
 
     Which represent the following colors:
 
@@ -288,27 +306,27 @@ Options
 
         $ harmony sort colors.txt
 
-    And we generate a file ``colors_hillbert_sorted.txt`` with the following content::
+    And we generate a file ``colors_hillbert.txt`` with the following content::
 
-        (84, 16, 13) Falu Red
-        (84, 62, 115) Meteorite
+        RGB(84, 16, 13) Falu Red
+        RGB(84, 62, 115) Meteorite
         #b52871 Deep Cerise
-        (201, 118, 6) Tenne (Tawny)
+        RGB(201, 118, 6) Tenne (Tawny)
         #0f8fb3 Pacific Blue
-        (49, 6, 210) Medium Blue
+        RGB(49, 6, 210) Medium Blue
 
     But if we sort with the ``-G`` flag on::
 
         $ harmony sort colors.txt -G
 
-    We generate a file ``colors_hillbert_sorted.txt`` with the following content::
+    We generate a file ``colors_hillbert.txt`` with the following content::
 
-        (84, 16, 13) 
-        (84, 62, 115) 
+        RGB(84, 16, 13) 
+        RGB(84, 62, 115) 
         #b52871 
-        (201, 118, 6) 
+        RGB(201, 118, 6) 
         #0f8fb3 
-        (49, 6, 210)
+        RGB(49, 6, 210)
 
 
 .. option:: --help

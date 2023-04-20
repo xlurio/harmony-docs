@@ -7,6 +7,10 @@ Introduction
 
 The ``image2txt`` command allow to extract the colors from an image and write them into a color palette file (see :ref:`file_specification`).
 
+    .. versionadded:: 0.7.0
+
+        Added command ``image2txt``
+
 =======
 Example
 =======
@@ -33,8 +37,6 @@ Arguments
 =========
 
 .. program:: harmony image2txt
-
-    .. versionadded:: 0.7.0
 
 .. option:: colors-file
 
@@ -110,6 +112,54 @@ Options
         #ff7381 Froly
 
 
+    .. option:: --minimum-difference <difference> -m <difference>
+
+    Default\: ``2.3``. Determine the minimum CIE76 distance [#CIE76]_ between each pair of colors extracted for them to be discarded. It needs to be a decimal number greater or equal to ``0``.
+
+    .. versionadded:: 1.1.0
+
+        Added ``--minimum-difference`` option to ``image2txt``
+
+    #######
+    Example
+    #######
+
+    Given the file ``colors.png`` with the following image:
+
+    .. image:: ../_static/images/image2txt-1.jpg
+
+    Let's generate a harmony file (see :ref:`file_specification`) with the minimum distance of ``2.3``::
+
+        $ harmony image2txt colors.png
+
+    And we generate a file ``colors.txt`` with the following content (see :ref:`file_specification`)::
+
+        RGB(162, 165, 180) Mischka
+        RGB(181, 190, 205) Link Water
+        RGB(114, 111, 96) Flint
+        ...
+        RGB(216, 195, 70) Confetti
+        RGB(143, 159, 27) Citron
+        RGB(83, 119, 45) Green Leaf
+
+    Now let's generate a harmony file (see :ref:`file_specification`) with the minimum distance set to ``15``::
+
+        $ harmony image2txt colors.png -m15
+
+    And we generate a file ``colors.txt`` with the following content (see :ref:`file_specification`)::
+
+        RGB(236, 197, 4) Gold
+        RGB(184, 68, 17) Rust
+        RGB(192, 102, 39) Christine
+        RGB(250, 219, 40) Golden Dream
+        RGB(254, 192, 31) Moon Yellow
+        RGB(190, 90, 15) Rust
+        RGB(201, 83, 21) Rust
+        RGB(232, 158, 1) Orange
+        RGB(40, 74, 0) Olive
+        RGB(247, 164, 0) Orange
+        RGB(83, 119, 45) Green Leaf
+
 .. option:: --recursively, -r
 
     Default\: ``False``. If a directory is passed, ``Harmony`` is going to read every image recursively inside the directory passed.
@@ -118,3 +168,8 @@ Options
 .. option:: --help
 
     Display the options and information about the command;
+
+
+.. rubric:: Footnotes
+
+.. [#CIE76] CIE. CIE publication 15.2. 2nd ed. (1986).

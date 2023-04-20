@@ -7,6 +7,10 @@ Introduction
 
 The ``svg2txt`` command allow to extract the colors from an SVG file and write them into a color palette file (see :ref:`file_specification`).
 
+    .. versionadded:: 1.0.0
+
+        Added command ``svg2txt``
+
 =======
 Example
 =======
@@ -33,10 +37,6 @@ Arguments
 =========
 
 .. program:: harmony svg2txt
-
-    .. versionadded:: 1.0.0
-
-        Added command ``svg2txt``
 
 .. option:: colors-file
 

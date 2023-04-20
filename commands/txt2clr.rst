@@ -50,9 +50,6 @@ Options
 
 .. program:: harmony txt2clr
 
-    .. versionadded:: 0.4.0
-
-
 .. option:: --suffix <suffix>, -s <suffix>
 
     The suffix to be append to the file's name.

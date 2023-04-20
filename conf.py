@@ -26,7 +26,7 @@ author = "Lucas Calegario"
 # The short X.Y version
 version = "1.1.0"
 # The full version, including alpha/beta/rc tags
-release = "February 2023 (version 1.1.0)"
+release = "April 2023 (version 1.1.0)"
 
 
 # -- General configuration ---------------------------------------------------

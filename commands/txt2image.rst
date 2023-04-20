@@ -7,6 +7,8 @@ Introduction
 
 The ``txt2image`` command allow to generate an image with the visual representation of a list of colors given a color palette file (see :ref:`file_specification`)
 
+    .. versionadded:: 0.6.0
+
 =======
 Example
 =======
@@ -34,8 +36,6 @@ Arguments
 =========
 
 .. program:: harmony image2txt
-
-    .. versionadded:: 0.6.0
 
 .. option:: image-file
 

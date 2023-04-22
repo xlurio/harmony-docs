@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harmony"
+version = "1.1.0"
+description = "CLI for sorting colors"
+authors = [
+    {name = "Lucas Calegario", email = "lucas.c.calegario@outlook.com"},
+]
+dependencies = [
+    "sphinx >=6.1.3",
+]
